@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='./css/app.css')}}"> {% endblock%}
+{% block main %}
+
+<aside>
+<div class = "fisrt">
+    <div class = "profile picture">
+        <img src="{{ url_for('static', filename='photo.png') }}" alt="Profile Picture">
+        
+    </div>
+
+    <h2>Kyle Stultz</h2>
+    <p>@KyleStultz</p>
+    <p>Address: St. Andrew, Jamaica </p>
+    <p>Joined: {{format_date_joined}}</p>
+</div>
+<div class = "second">
+    
+    <div class ='about'>
+        <p>My name is Kyle Stultz. I am 22 years old and from St. Andrew Jamaica. I'm an Information Technology Major at the University of West Indies, whose currently in third year. 
+            I interested in learning web development, UX desgin and cybersecuirty. As it pertains to web development, the programming languages that have my inertest the most are python, css, javascript and html.
+        </p>
+    </div>
+    
+    <div class="tracking">
+        <div class = "p2">
+            <p class="bold">7</p>
+            <p>Post</p>
+        </div>
+
+        <div class = "p2">
+            <p class="bold">100</p>
+            <p>Following</p>
+        </div>
+
+        <div class = "p2">
+            <p class="bold">250</p>
+            <p>Followers</p>
+        </div>
+        
+
+    </div>
+
+</div>
+<button type="button" class="btn">Follow</button>
+
+</aside>
+{% endblock %}
